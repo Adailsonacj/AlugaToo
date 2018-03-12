@@ -1,6 +1,6 @@
 <?php
-require_once "daos/daoEndereco.php";
-require_once "daos/daoCidades.php";
+require_once "daos/DaoEndereco.php";
+//require_once "daos/DaoCidades.php";
 
 if (isset($_POST["btnCadastraEndereco"])):
 
@@ -10,10 +10,10 @@ if (isset($_POST["btnCadastraEndereco"])):
     $longradouro = filter_input(INPUT_POST, "longradouro", FILTER_SANITIZE_MAGIC_QUOTES);
     $numero = filter_input(INPUT_POST, "numero", FILTER_SANITIZE_MAGIC_QUOTES);
 
-    $cit = new daoCidades();
-    $cit->adicionaCidade($cidade, $estado);
-#$end = new daoEndereco();
-#$end->novoEndereco($bairro,$numero,$longradouro,$numero, 4);
+    #$cit = new daoCidades();
+    #$cit->adicionaCidade($cidade, $estado);
+    $end = new daoEndereco();
+    $end->novoEndereco($bairro, $numero, $longradouro, $numero, 4);
 endif;
 
 ?>
@@ -25,6 +25,7 @@ endif;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AlugarToo</title>
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/js/bootstrap.min.js" rel="stylesheet">
     <link href="bootstrap/css/signin.css" rel="stylesheet">
 </head>
 <body>
@@ -50,6 +51,9 @@ endif;
 </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<div id="rodape">
+    <?php include "rodape.php"; ?>
+</div>
 </body>
 </html>

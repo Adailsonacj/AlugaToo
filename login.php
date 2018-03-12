@@ -1,13 +1,14 @@
 <?php
+
 session_start();
-require_once 'daos/daoCidades.php';
+require_once 'daos/DaoCidades.php';
 if (isset($_POST['btnLogin'])):
 
     $input1 = filter_input(INPUT_POST, "usuario", FILTER_SANITIZE_MAGIC_QUOTES);
     $input2 = filter_input(INPUT_POST, "senha", FILTER_SANITIZE_MAGIC_QUOTES);
 
     $vr = new daoCidades;
-    echo $vr->adicionaCidade($input1,$input2);
+    echo $vr->adicionaCidade($input1, $input2);
 
 endif;
 
@@ -21,10 +22,11 @@ endif;
     <title>Entre no sistema</title>
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="bootstrap/css/signin.css" rel="stylesheet">
+    <link href="bootstrap/js/bootstrap.min.js" rel="stylesheet">
 </head>
 <body>
 <div id="navbar">
-    <?php include 'navbar.php'; ?>
+    <?php include "navbar.php"; ?>
 </div>
 <div class="container">
     <div class="form-signin" style="background: #42dea4;">
@@ -57,6 +59,9 @@ endif;
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<div id="rodape">
+    <?php include "rodape.php"; ?>
+</div>
 </body>
 </html>
