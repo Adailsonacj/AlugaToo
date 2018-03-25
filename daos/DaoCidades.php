@@ -1,6 +1,6 @@
 <?php
 
-include __DIR__.'/../database/Conexao.php';
+include __DIR__.'../database/Conexao.php';
 
 Class daoCidades
 {

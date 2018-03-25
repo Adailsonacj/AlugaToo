@@ -22,6 +22,4 @@ if ($stmt->rowCount() > 0) {
     unset($_SESSION['login']);
     unset($_SESSION['senha']);
     header("location:login.php");
-
-    
 }

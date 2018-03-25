@@ -24,9 +24,7 @@ endif;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AlugarToo</title>
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="bootstrap/js/bootstrap.min.js" rel="stylesheet">
-    <link href="bootstrap/css/signin.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
 <div id="navbar">
@@ -35,13 +33,21 @@ endif;
 <div class="container">
     <form method="POST" action="">
 
-        <input type="text" name="Estado" placeholder="Selecione seu estado#" class="form-control"><br>
-
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Dropdown button
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Link 1</a>
+                <a class="dropdown-item" href="#">Link 2</a>
+                <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+        </div>
         <input type="text" name="cidade" placeholder="Digite o nome de sua cidade" class="form-control"><br>
 
         <input type="text" name="bairro" placeholder="Digite Bairro" class="form-control"><br>
 
-        <input type="text" name="longradouro" placeholder="Digite seu longradouro" class="form-control"><br>
+        <input type="text" name="logradouro" placeholder="Digite seu longradouro" class="form-control"><br>
 
         <input type="text" name="numero" placeholder="Seu número" class="form-control"><br>
 
@@ -49,9 +55,9 @@ endif;
 
     </form>
 </div>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <div id="rodape">
     <?php include "rodape.php"; ?>
 </div>

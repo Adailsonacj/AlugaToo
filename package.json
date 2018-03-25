@@ -1,0 +1,19 @@
+{
+  "name": "alugatoo",
+  "version": "1.0.0",
+  "description": "Projeto PHP com Bootstrap 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adailsonacj/AlugaToo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adailsonacj/AlugaToo/issues"
+  },
+  "homepage": "https://github.com/Adailsonacj/AlugaToo#readme"
+}

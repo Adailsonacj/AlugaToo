@@ -5,17 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AlugarToo</title>
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="bootstrap/css/signin.css" rel="stylesheet">
-    <link href="bootstrap/js/bootstrap.min.js" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
 <div id="navbar">
     <?php include 'navbar.php'; ?>
 </div>
 <!-- Aqui começa o conteudo -->
-</nav> <!-- final do navbar -->
-
 <div class="row">
     <div class="col-md-4">
         <img src="http://placehold.it/350x350" alt="">
@@ -45,7 +41,6 @@
 </div><!-- div row conteudo -->
 <hr>
 ...
-</div><!-- div wrapper -->
 <center>
     <footer> <!-- Aqui e a area do footer -->
         <div class="container">
@@ -62,9 +57,8 @@
         </div>
     </footer>
 </center>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <div id="rodape">
     <?php include "rodape.php"; ?>
 </div>
