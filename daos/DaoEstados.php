@@ -7,23 +7,17 @@
  */
 include __DIR__ . '/../database/Conexao.php';
 
-Class DaoEstados
+
+function getEstados()
 {
-    public function getEstados()
-    {
-        $conexao = new Conexao();
-        $instance = $conexao::conecta();
-        $sql = ("SELECT nome FROM estados");
-
-        $stmt = $instance->prepare($sql);
-        $stmt->execute();
-        $array = array();
-        $array[] = $stmt->fetchAll();
-
-        var_dump($array->"nome");
-
-
-        //echo implode("=",$stmt->fetch()) ;
-        Conexao::desconecta();
+    $estados = array();
+    $conexao = new Conexao();
+    $instance = $conexao::conecta();
+    $sql = ("SELECT * FROM estados");
+    $stmt = $instance->prepare($sql);
+    $stmt->execute();
+    while ($estado = $stmt->fetch()) {
+        array_push($estados, $estado);
     }
+    return $estados;
 }
