@@ -1,3 +1,12 @@
+<?php include "daos/DaoProdutos.php";
+include "database/Conexao.php";
+
+$conexao = new Conexao();
+$con = $conexao::conecta();
+
+$produtos = getProdutos($con);
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,50 +22,19 @@
     </div>
     <!-- Aqui começa o conteudo -->
     <div class="row">
-        <div class="col-md-4">
-            <img src="http://placehold.it/350x350" alt="">
-        </div>
-        <div class="col-md-8">
-            <h2><a href="#">Roçadeira</a></h2>
-            <p>
-                Alugue já essa roçadeira STHIL a gasolina. E você aninda leva o tanque cheio!!
-                Ótima solução para seu jardim, chácara e etc...
-            </p>
-            <a href="#">Saiba mais</a>
-        </div>
-    </div><!-- div row conteudo -->
-    <hr>
-    <div class="row">
-        <div class="col-md-4">
-            <img src="http://placehold.it/350x350" alt="">
-        </div>
-        <div class="col-md-8">
-            <h2><a href="#">Furadeira Black&Decker 1700W</a></h2>
-            <p>
-                Essa furadeira é incrível! fura concreto, madeira, ferro, qualquer material,
-                é muita pontência, aproveite!!!
-            </p>
-            <a href="#">Saiba mais</a>
-        </div>
-    </div><!-- div row conteudo -->
-    <hr>
-    ...
-    <center>
-        <footer> <!-- Aqui e a area do footer -->
-            <div class="container">
-                <div class="row">
-                    <div id="logoFooter" class="col-md-offset-3 col-md-3">
-                        <h2>AlugarToo</h2>
-                    </div> <!-- Aqui e a area da logo do rodape -->
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>&copy; Todos os direitos reservados. ®</p>
-                    </div>
-                </div>
+        <?php foreach ($produtos as $produto) { ?>
+            <div class="col-md-4 col-md-pull-7">
+                <img src=<?= $produto['imagem']?> width="400" height="400"/>
             </div>
-        </footer>
-    </center>
+            <div class="col-md-8">
+                <h2><a href="#"><?= $produto['nome'] ?></a></h2>
+                <p>
+                    <?= $produto['descricao'] ?>
+                </p>
+                <h5>Alugue já por apenas: <?= $produto['valor'] ?>R$ por hora que usar!</h5>
+            </div>
+        <?php } ?>
+    </div><!-- div row conteudo -->
     <div id="rodape">
         <?php include "rodape.php"; ?>
     </div>

@@ -1,29 +1,18 @@
 <?php
 
-include __DIR__.'../database/Conexao.php';
 
-Class daoCidades
+function selecionaCidades($idEstado, $conexao)
 {
-
-    public function deleteCidade($nome, $estado)
-    {
-        $conexao = new Conexao();
-        $instance = $conexao::conecta();
-        // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = ("DELETE FROM cidades WHERE nome AND fk_id_estado VALUES ('{$nome}',{$estado})");
-        $stmt = $instance->prepare($sql);
+    try {
+        $cidades = array();
+        $sql = ("SELECT * FROM cidades WHERE fk-idEstado = $idEstado");
+        $stmt = $conexao->prepare($sql);
         $stmt->execute();
-        Conexao::desconecta();
-    }
-
-    public function adicionaCidade($nome, $idEstado)
-    {
-        $conexao = new Conexao();
-        $instance = $conexao::conecta();
-        // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = ("INSERT INTO cidades(nome, fk_id_estado) VALUES ('{$nome}',{$idEstado})");
-        $stmt = $instance->prepare($sql);
-        $stmt->execute();
-        Conexao::desconecta();
+        while ($cidade = $stmt->fetch()) {
+            array_push($cidades, $cidade);
+        }
+        return $cidades;
+    } catch (PDOException $exception) {
+        die($exception->getMessage());
     }
 }

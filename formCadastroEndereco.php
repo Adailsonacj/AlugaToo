@@ -3,14 +3,17 @@ include "daos/DaoEndereco.php";
 
 $conexao = new Conexao();
 $con = $conexao::conecta();
-$idCidade = $_POST['cidade'];
+$idCidade = $_GET['cidade'];
 
 if (isset($_POST["btnCadastraEndereco"])):
-
+    $erro = false;
     $bairro = filter_input(INPUT_POST, "bairro", FILTER_SANITIZE_MAGIC_QUOTES);
     $logradouro = filter_input(INPUT_POST, "logradouro", FILTER_SANITIZE_MAGIC_QUOTES);
     $numero = filter_input(INPUT_POST, "numero", FILTER_SANITIZE_MAGIC_QUOTES);
-    novoEndereco($bairro, $numero, $logradouro, $idCidade, $con);
+    if (!empty($bairro) || !empty($logradouro) || !empty($numero)) {
+        novoEndereco($bairro, $numero, $logradouro, $idCidade, $con);
+        header("location:formCadastroPessoa.php");
+    }
 
 endif;
 
@@ -28,7 +31,7 @@ endif;
     <?php include 'navbar.php'; ?>
 </div>
 <div class="container">
-    <form method="POST" action="formCadastroUsuario.php">
+    <form method="POST" action="">
         <center>
             <input type="text" name="bairro" placeholder="Digite Bairro" class="form-control"><br>
 

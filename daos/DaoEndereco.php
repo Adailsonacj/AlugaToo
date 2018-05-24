@@ -1,17 +1,29 @@
 <?php
 
-include __DIR__.'/../database/Conexao.php';
-
-class  daoEndereco
+function novoEndereco($bairro, $numero, $logradouro, $idCidade, $conexao)
 {
-    public function novoEndereco ($bairro, $numero, $longradouro, $complemento, $idCidade)
-    {
-        $conexao = new Conexao();
-        $instance = $conexao::conecta();
-        // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = ("insert into endereco(bairro, numero, longradouro, complemento, fk_id_cidade) VALUES ('{$bairro}',{$numero},'{$longradouro}','{$complemento}',{$idCidade})");
-        $stmt = $instance->prepare($sql);
+    try {
+        $sql = ("insert into endereco(bairro, numero, logradouro, fk_id_cidade) VALUES ('{$bairro}',{$numero},'{$logradouro}',{$idCidade})");
+        $stmt = $conexao->prepare($sql);
         $stmt->execute();
         Conexao::desconecta();
+    } catch (PDOException $exception) {
+        die($exception->getMessage());
+    }
+}
+
+function ultimaInsercaoEndereco($con)
+{
+    try {
+        $sql = "select max(id_endereco) from endereco";
+        $stmt = $con->prepare($sql);
+        $stmt->execute();
+
+        while ($row = $stmt->fetch()) {
+            $endereco = $row[0];
+        }
+        return $endereco;
+    } catch (PDOException $exception) {
+        die($exception->getMessage());
     }
 }

@@ -7,8 +7,12 @@
     <title>AlugarToo</title>
 </head>
 <body>
-<div id="navbar">
-
-</div>
+<center>
+    <div class="container">
+        <div class="col-md-12">
+            <p>Todos os direitos reservados. ®</p>
+        </div>
+    </div>
+</center>
 </body>
 </html>

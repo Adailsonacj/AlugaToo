@@ -8,16 +8,29 @@ $senha = $_POST['senha'];
 
 $conexao = new Conexao();
 $instance = $conexao::conecta();
-echo $sql = "select * from usuario where email = '{$login}' AND senha = '{$senha}'";
+$sql = "select * from usuario where usuario = '{$login}' AND senha = '{$senha}'";
 $stmt = $instance->prepare($sql);
 $stmt->execute();
 
 Conexao::desconecta();
 
 if ($stmt->rowCount() > 0) {
+
     $_SESSION['login'] = $login;
     $_SESSION['senha'] = $senha;
+    while ($row = $stmt->fetch()) {
+        $idPessoa = $row['fk_id_pessoa_fisica'];
+    }
+    $_SESSION['idPessoaFisica'] = $idPessoa;
+
     header("location:index.php");
+
+
+    while ($row = $stmt->fetch()) {
+        $endereco = $row[0];
+    }
+
+
 } else {
     unset($_SESSION['login']);
     unset($_SESSION['senha']);

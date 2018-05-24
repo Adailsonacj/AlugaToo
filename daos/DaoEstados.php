@@ -5,19 +5,18 @@
  * Date: 11/03/18
  * Time: 21:15
  */
-include __DIR__ . '/../database/Conexao.php';
-
-
-function getEstados()
+function getEstados($conexao)
 {
-    $estados = array();
-    $conexao = new Conexao();
-    $instance = $conexao::conecta();
-    $sql = ("SELECT * FROM estados");
-    $stmt = $instance->prepare($sql);
-    $stmt->execute();
-    while ($estado = $stmt->fetch()) {
-        array_push($estados, $estado);
+    try {
+        $estados = array();
+        $sql = ("SELECT * FROM estados");
+        $stmt = $conexao->prepare($sql);
+        $stmt->execute();
+        while ($estado = $stmt->fetch()) {
+            array_push($estados, $estado);
+        }
+        return $estados;
+    } catch (PDOException $exception) {
+        die($exception->getMessage());
     }
-    return $estados;
 }

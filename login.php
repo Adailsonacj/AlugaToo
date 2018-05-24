@@ -30,7 +30,7 @@ endif;
         <h2 class="text-center">Login</h2>
         <form method="POST" action="ValidaLogin.php">
             <!--<label>Usuário</label>-->
-            <input type="text" name="login" placeholder="Digite o seu usuário" class="form-control"><br>
+            <input type="email" name="login" placeholder="Digite o seu usuário" class="form-control"><br>
 
             <!--<label>Senha</label>-->
             <input type="password" name="senha" placeholder="Digite a sua senha" class="form-control"><br>
@@ -38,7 +38,11 @@ endif;
             <input type="submit" name="btnLogin" value="Acessar" class="btn btn-success btn-block">
 
             <div class="center" style="margin-top: 20px;">
-                <a href="formEndereco.php">Cadastre-se</a>
+                <a href="formEstado.php">Cadastre-se</a>
+            </div>
+
+            <div class="center" style="margin-top: 20px;">
+                <a href="formRecuperaSenha.php">Esqueceu a Senha?</a>
             </div>
 
 

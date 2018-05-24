@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="AlugaToo@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="AlugaToo">
+      <ObjectId>16384</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12413</ObjectId>
+    </database>
+    <database id="4" parent="1" name="Aula">
+      <ObjectId>16564</ObjectId>
+    </database>
+    <role id="5" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="6" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-04-03.09:37:08.051</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1019</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="7" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="9" parent="2" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+    </schema>
+    <schema id="10" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+    </schema>
+    <schema id="11" parent="2" name="information_schema">
+      <ObjectId>12121</ObjectId>
+    </schema>
+    <sequence id="12" parent="6" name="pessoa_fisica_id_pessoa_fisica_seq">
+      <ObjectId>16664</ObjectId>
+      <StateNumber>936</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="13" parent="6" name="produtos_id_produto_seq">
+      <ObjectId>16726</ObjectId>
+      <StateNumber>953</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="14" parent="6" name="produtos_log_id_produto_seq">
+      <ObjectId>16775</ObjectId>
+      <StateNumber>960</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="15" parent="6" name="usuario_id_usuario_seq">
+      <ObjectId>16677</ObjectId>
+      <StateNumber>937</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="16" parent="6" name="cidades_id_cidade_seq">
+      <ObjectId>16388</ObjectId>
+      <StateNumber>667</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="17" parent="6" name="endereco_id_endereco_seq">
+      <ObjectId>16396</ObjectId>
+      <StateNumber>670</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="18" parent="6" name="estados_id_estado_seq">
+      <ObjectId>16404</ObjectId>
+      <StateNumber>673</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="19" parent="6" name="pessoa_id_pessoa_seq">
+      <ObjectId>16417</ObjectId>
+      <StateNumber>679</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="20" parent="6" name="cidades">
+      <ObjectId>16385</ObjectId>
+      <StateNumber>762</StateNumber>
+    </table>
+    <table id="21" parent="6" name="endereco">
+      <ObjectId>16390</ObjectId>
+      <StateNumber>762</StateNumber>
+    </table>
+    <table id="22" parent="6" name="estados">
+      <ObjectId>16398</ObjectId>
+      <StateNumber>708</StateNumber>
+    </table>
+    <table id="23" parent="6" name="pessoa">
+      <ObjectId>16406</ObjectId>
+      <StateNumber>936</StateNumber>
+    </table>
+    <table id="24" parent="6" name="pessoa_fisica">
+      <ObjectId>16666</ObjectId>
+      <StateNumber>960</StateNumber>
+    </table>
+    <table id="25" parent="6" name="produtos">
+      <ObjectId>16728</ObjectId>
+      <StateNumber>1019</StateNumber>
+    </table>
+    <table id="26" parent="6" name="produtos_log">
+      <ObjectId>16777</ObjectId>
+      <StateNumber>960</StateNumber>
+    </table>
+    <table id="27" parent="6" name="usuario">
+      <ObjectId>16679</ObjectId>
+      <StateNumber>937</StateNumber>
+    </table>
+    <view id="28" parent="6" name="vw_cidadesestados">
+      <ObjectId>16486</ObjectId>
+      <StateNumber>795</StateNumber>
+    </view>
+    <view id="29" parent="6" name="vw_enderecocidade">
+      <ObjectId>16490</ObjectId>
+      <StateNumber>796</StateNumber>
+    </view>
+    <view id="30" parent="6" name="vw_pessoa_endereco">
+      <ObjectId>16494</ObjectId>
+      <StateNumber>727</StateNumber>
+    </view>
+    <routine id="31" parent="6" name="allCidades">
+      <ObjectId>16508</ObjectId>
+      <StateNumber>751</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>text</ResultsDefinition>
+      <LanguageName>sql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="32" parent="6" name="cadastroPessoaFisica">
+      <ObjectId>16596</ObjectId>
+      <StateNumber>828</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>enbairro character varying, ennumero integer, enlongradouro character varying, encomplemento character varying, enidcidade integer, penome character varying, penascimento date, pfcpf character, pfrg character, usemail character varying, ussenha character varying</ArgumentsDefinition>
+      <ResultsDefinition>boolean</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="33" parent="6" name="data_registro_usuario">
+      <ObjectId>16639</ObjectId>
+      <StateNumber>892</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="34" parent="6" name="produtolog">
+      <ObjectId>16791</ObjectId>
+      <StateNumber>987</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <column id="35" parent="20" name="id_cidade">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>687</StateNumber>
+      <DefaultExpression>nextval(&apos;cidades_id_cidade_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>cidades_id_cidade_seq</SequenceName>
+    </column>
+    <column id="36" parent="20" name="nome">
+      <Position>2</Position>
+      <DataType>varchar(40)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>763</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="37" parent="20" name="fk_id_estado">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>714</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="38" parent="20" name="clientes_cidades_pkey">
+      <ObjectId>16442</ObjectId>
+      <ColNames>id_cidade</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="39" parent="20" name="clientes_cidades_pkey">
+      <ObjectId>16443</ObjectId>
+      <ColNames>id_cidade</ColNames>
+      <UnderlyingIndexName>clientes_cidades_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="40" parent="20" name="cidades_id_estado_fkey">
+      <ObjectId>16456</ObjectId>
+      <ColNames>fk_id_estado</ColNames>
+      <RefTableId>16398</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>estados</RefTableName>
+      <RefKeyName>clientes_pkey</RefKeyName>
+      <RefColNames>id_estado</RefColNames>
+    </foreign-key>
+    <column id="41" parent="21" name="id_endereco">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>688</StateNumber>
+      <DefaultExpression>nextval(&apos;endereco_id_endereco_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>endereco_id_endereco_seq</SequenceName>
+    </column>
+    <column id="42" parent="21" name="bairro">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>669</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="43" parent="21" name="numero">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>669</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="44" parent="21" name="logradouro">
+      <Position>4</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>901</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="45" parent="21" name="complemento">
+      <Position>5</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>669</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="46" parent="21" name="fk_id_cidade">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>716</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="47" parent="21" name="clientes_endereco_pkey">
+      <ObjectId>16444</ObjectId>
+      <ColNames>id_endereco</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="48" parent="21" name="clientes_endereco_pkey">
+      <ObjectId>16445</ObjectId>
+      <ColNames>id_endereco</ColNames>
+      <UnderlyingIndexName>clientes_endereco_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="49" parent="21" name="endereco_id_cidade_fkey">
+      <ObjectId>16461</ObjectId>
+      <ColNames>fk_id_cidade</ColNames>
+      <RefTableId>16385</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>cidades</RefTableName>
+      <RefKeyName>clientes_cidades_pkey</RefKeyName>
+      <RefColNames>id_cidade</RefColNames>
+    </foreign-key>
+    <column id="50" parent="22" name="id_estado">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>689</StateNumber>
+      <DefaultExpression>nextval(&apos;estados_id_estado_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>estados_id_estado_seq</SequenceName>
+    </column>
+    <column id="51" parent="22" name="nome">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>672</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="52" parent="22" name="uf">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>672</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="53" parent="22" name="clientes_pkey">
+      <ObjectId>16452</ObjectId>
+      <ColNames>id_estado</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="54" parent="22" name="clientes_pkey">
+      <ObjectId>16453</ObjectId>
+      <ColNames>id_estado</ColNames>
+      <UnderlyingIndexName>clientes_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="55" parent="23" name="id_pessoa">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>690</StateNumber>
+      <DefaultExpression>nextval(&apos;pessoa_id_pessoa_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>pessoa_id_pessoa_seq</SequenceName>
+    </column>
+    <column id="56" parent="23" name="nome">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>675</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="57" parent="23" name="nascimento">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>675</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="58" parent="23" name="fk_id_endereco">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>726</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="59" parent="23" name="clientes_pessoa_pkey">
+      <ObjectId>16450</ObjectId>
+      <ColNames>id_pessoa</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="60" parent="23" name="clientes_pessoa_pkey">
+      <ObjectId>16451</ObjectId>
+      <ColNames>id_pessoa</ColNames>
+      <UnderlyingIndexName>clientes_pessoa_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="61" parent="23" name="pessoa_FK_id_endereco_fkey">
+      <ObjectId>16466</ObjectId>
+      <ColNames>fk_id_endereco</ColNames>
+      <RefTableId>16390</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>endereco</RefTableName>
+      <RefKeyName>clientes_endereco_pkey</RefKeyName>
+      <RefColNames>id_endereco</RefColNames>
+    </foreign-key>
+    <column id="62" parent="24" name="id_pessoa_fisica">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>936</StateNumber>
+      <DefaultExpression>nextval(&apos;pessoa_fisica_id_pessoa_fisica_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>pessoa_fisica_id_pessoa_fisica_seq</SequenceName>
+    </column>
+    <column id="63" parent="24" name="fk_id_pessoa">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>936</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="64" parent="24" name="cpf">
+      <Position>3</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>938</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="65" parent="24" name="rg">
+      <Position>4</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>938</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="66" parent="24" name="clientes_pessoa_f_pkey">
+      <ObjectId>16670</ObjectId>
+      <ColNames>id_pessoa_fisica</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="67" parent="24" name="clientes_pessoa_f_pkey">
+      <ObjectId>16671</ObjectId>
+      <ColNames>id_pessoa_fisica</ColNames>
+      <UnderlyingIndexName>clientes_pessoa_f_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="68" parent="24" name="pessoa_fisica_FK_id_pessoa_fkey">
+      <ObjectId>16672</ObjectId>
+      <ColNames>fk_id_pessoa</ColNames>
+      <RefTableId>16406</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>pessoa</RefTableName>
+      <RefKeyName>clientes_pessoa_pkey</RefKeyName>
+      <RefColNames>id_pessoa</RefColNames>
+    </foreign-key>
+    <column id="69" parent="25" name="id_produto">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>953</StateNumber>
+      <DefaultExpression>nextval(&apos;produtos_id_produto_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>produtos_id_produto_seq</SequenceName>
+    </column>
+    <column id="70" parent="25" name="nome">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>953</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="71" parent="25" name="descricao">
+      <Position>3</Position>
+      <DataType>char(300)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>953</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="72" parent="25" name="valor">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>953</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="73" parent="25" name="fk_idpessoafisica">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>953</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="74" parent="25" name="imagem">
+      <Position>6</Position>
+      <DataType>char(100)|0</DataType>
+      <StateNumber>1019</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <index id="75" parent="25" name="id_produto_pkey">
+      <ObjectId>16732</ObjectId>
+      <ColNames>id_produto</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="76" parent="25" name="id_produto_pkey">
+      <ObjectId>16733</ObjectId>
+      <ColNames>id_produto</ColNames>
+      <UnderlyingIndexName>id_produto_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="77" parent="25" name="produto_FK_id_pesso_f_fkey">
+      <ObjectId>16734</ObjectId>
+      <ColNames>fk_idpessoafisica</ColNames>
+      <RefTableId>16666</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>pessoa_fisica</RefTableName>
+      <RefKeyName>clientes_pessoa_f_pkey</RefKeyName>
+      <RefColNames>id_pessoa_fisica</RefColNames>
+    </foreign-key>
+    <trigger id="78" parent="25" name="produtolog">
+      <ObjectId>16793</ObjectId>
+      <StateNumber>984</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>D</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16791</CallRoutineId>
+    </trigger>
+    <column id="79" parent="26" name="id_produto">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>960</StateNumber>
+      <DefaultExpression>nextval(&apos;produtos_log_id_produto_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>produtos_log_id_produto_seq</SequenceName>
+    </column>
+    <column id="80" parent="26" name="nome">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>960</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="81" parent="26" name="descricao">
+      <Position>3</Position>
+      <DataType>char(300)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>960</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="82" parent="26" name="valor">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>960</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="83" parent="26" name="fk_idpessoafisica">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>960</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="84" parent="26" name="id_produtolog_pkey">
+      <ObjectId>16781</ObjectId>
+      <ColNames>id_produto</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="85" parent="26" name="id_produtolog_pkey">
+      <ObjectId>16782</ObjectId>
+      <ColNames>id_produto</ColNames>
+      <UnderlyingIndexName>id_produtolog_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="86" parent="26" name="produto_LOG_id_pesso_f_fkey">
+      <ObjectId>16783</ObjectId>
+      <ColNames>fk_idpessoafisica</ColNames>
+      <RefTableId>16666</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>pessoa_fisica</RefTableName>
+      <RefKeyName>clientes_pessoa_f_pkey</RefKeyName>
+      <RefColNames>id_pessoa_fisica</RefColNames>
+    </foreign-key>
+    <column id="87" parent="27" name="id_usuario">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>937</StateNumber>
+      <DefaultExpression>nextval(&apos;usuario_id_usuario_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>usuario_id_usuario_seq</SequenceName>
+    </column>
+    <column id="88" parent="27" name="email">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>937</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="89" parent="27" name="senha">
+      <Position>3</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>937</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="90" parent="27" name="fk_id_pessoa_fisica">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>937</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="91" parent="27" name="dataregistro">
+      <Position>5</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <StateNumber>937</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <index id="92" parent="27" name="clientes_usuario_pkey">
+      <ObjectId>16686</ObjectId>
+      <ColNames>id_usuario</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="93" parent="27" name="clientes_usuario_pkey">
+      <ObjectId>16687</ObjectId>
+      <ColNames>id_usuario</ColNames>
+      <UnderlyingIndexName>clientes_usuario_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="94" parent="27" name="usuario_FK_id_pesso_f_fkey">
+      <ObjectId>16688</ObjectId>
+      <ColNames>fk_id_pessoa_fisica</ColNames>
+      <RefTableId>16666</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>pessoa_fisica</RefTableName>
+      <RefKeyName>clientes_pessoa_f_pkey</RefKeyName>
+      <RefColNames>id_pessoa_fisica</RefColNames>
+    </foreign-key>
+    <trigger id="95" parent="27" name="registrousuario">
+      <ObjectId>16693</ObjectId>
+      <StateNumber>937</StateNumber>
+      <Turn>before-row</Turn>
+      <Events>I</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16639</CallRoutineId>
+    </trigger>
+    <column id="96" parent="28" name="fk_id_estado">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>715</StateNumber>
+    </column>
+    <column id="97" parent="28" name="id_estado">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>715</StateNumber>
+    </column>
+    <column id="98" parent="29" name="id_cidade">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>725</StateNumber>
+    </column>
+    <column id="99" parent="29" name="fk_id_cidade">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>725</StateNumber>
+    </column>
+    <column id="100" parent="30" name="fk_id_endereco">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>727</StateNumber>
+    </column>
+    <column id="101" parent="30" name="id_endereco">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>727</StateNumber>
+    </column>
+    <argument id="102" parent="31">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>text|0</DataType>
+    </argument>
+    <argument id="103" parent="32" name="enbairro">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+    </argument>
+    <argument id="104" parent="32" name="ennumero">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="105" parent="32" name="enlongradouro">
+      <Position>3</Position>
+      <DataType>varchar|0</DataType>
+    </argument>
+    <argument id="106" parent="32" name="encomplemento">
+      <Position>4</Position>
+      <DataType>varchar|0</DataType>
+    </argument>
+    <argument id="107" parent="32" name="enidcidade">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="108" parent="32" name="penome">
+      <Position>6</Position>
+      <DataType>varchar|0</DataType>
+    </argument>
+    <argument id="109" parent="32" name="penascimento">
+      <Position>7</Position>
+      <DataType>date|0</DataType>
+    </argument>
+    <argument id="110" parent="32" name="pfcpf">
+      <Position>8</Position>
+      <DataType>char|0</DataType>
+    </argument>
+    <argument id="111" parent="32" name="pfrg">
+      <Position>9</Position>
+      <DataType>char|0</DataType>
+    </argument>
+    <argument id="112" parent="32" name="usemail">
+      <Position>10</Position>
+      <DataType>varchar|0</DataType>
+    </argument>
+    <argument id="113" parent="32" name="ussenha">
+      <Position>11</Position>
+      <DataType>varchar|0</DataType>
+    </argument>
+    <argument id="114" parent="32">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>boolean|0</DataType>
+    </argument>
+    <argument id="115" parent="33">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0</DataType>
+    </argument>
+    <argument id="116" parent="34">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>
