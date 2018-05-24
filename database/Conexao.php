@@ -9,7 +9,7 @@ class Conexao
     {
         if (self::$instance == null):
         try {
-            self::$instance = new PDO("pgsql:host=localhost;port=5433;dbname=alugatoo;user=postgres;password=root");
+            self::$instance = new PDO("pgsql:host=ec2-54-83-59-120.compute-1.amazonaws.com;port=5432;dbname=d9tsikvl54gvs8;user=tjcuiltmzdefau;password=6a218a910abeec9875256888d801177234dac2c9a1a68eea4536ea45cac69d1c");
         } catch (PDOException $e) {
             echo 'Erro ao conectar com DataBase: ' . $e->getMessage();
         }
